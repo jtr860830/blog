@@ -101,7 +101,6 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: cactus
-
 theme_config:
   nav:
     home: /
@@ -116,7 +115,13 @@ theme_config:
     facebook: https://www.facebook.com/jtr860830
     instagram: https://www.instagram.com/jtr860830
     linkedin: https://www.linkedin.com/in/jtr860830
-    mail: mailto:jtr860830@gmail.com
+    medium: https://medium.com/@jtr860830
+    mail: mailto:work@josh-hsieh.tw
+
+# gravatar
+gravatar:
+  email: work@josh-hsieh.tw
+  hash: 4f232a480d8175f75bfec21b861524c8
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
