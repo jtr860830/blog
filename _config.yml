@@ -5,7 +5,7 @@
 # Site
 title: Josh Hsieh
 subtitle: blog
-description: ""
+description: "Hi, I'm Josh. A student/software engineer/hacker in Taiwan."
 keywords:
 author: Josh Hsieh
 language: en
@@ -105,13 +105,13 @@ theme_config:
   nav:
     home: /
     Writings: /archives/
-    projects: http://github.com/jtr860830
     Tags: /tags/
     Categories: /categories/
     search: /search/
+    projects: http://github.com/jtr860830
     about: /about/
   social_links:
-    github: http://github.com/probberechts/jtr860830
+    github: http://github.com/jtr860830
     facebook: https://www.facebook.com/jtr860830
     instagram: https://www.instagram.com/jtr860830
     linkedin: https://www.linkedin.com/in/jtr860830
