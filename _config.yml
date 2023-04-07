@@ -111,11 +111,11 @@ theme_config:
     projects: http://github.com/jtr860830
     about: /about/
   social_links:
-    github: http://github.com/jtr860830
     facebook: https://www.facebook.com/jtr860830
     instagram: https://www.instagram.com/jtr860830
     linkedin: https://www.linkedin.com/in/jtr860830
     medium: https://medium.com/@jtr860830
+    github: http://github.com/jtr860830
     mail: mailto:work@josh-hsieh.tw
 
 # gravatar
