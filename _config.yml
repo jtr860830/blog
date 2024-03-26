@@ -13,7 +13,7 @@ timezone: Asia/Taipei
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://josh-hsieh.tw
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -116,11 +116,11 @@ theme_config:
     linkedin: https://www.linkedin.com/in/jtr860830
     medium: https://medium.com/@jtr860830
     github: http://github.com/jtr860830
-    mail: mailto:work@josh-hsieh.tw
+    mail: mailto:me@josh-hsieh.tw
 
 # gravatar
 gravatar:
-  email: work@josh-hsieh.tw
+  email: me@josh-hsieh.tw
   hash: 4f232a480d8175f75bfec21b861524c8
 
 # Deployment
