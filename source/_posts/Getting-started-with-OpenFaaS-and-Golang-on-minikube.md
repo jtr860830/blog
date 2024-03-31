@@ -4,6 +4,7 @@ date: 2019-06-11 00:00:00
 categories:
   - Software Engineering
 tags:
+  - Go
   - Golang
   - Kubernetes
   - k8s
