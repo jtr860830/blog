@@ -36,11 +36,13 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 
 ### Certificate 證照
 
-- [LFCS: Linux Foundation Certified Systems Administrator](https://www.credly.com/badges/9d25789f-6b3c-42dc-95a8-93b1aa6e298f/linked_in_profile)
-- [LFS207: Linux System Administration Essentials](https://www.credly.com/badges/ffa5c1c1-cb8d-4eb4-8338-a4240fc33e2a/linked_in_profile)
+- [LFCS: Linux Foundation Certified Systems Administrator](https://www.credly.com/badges/9d25789f-6b3c-42dc-95a8-93b1aa6e298f/public_url)
+- [LFS207: Linux System Administration Essentials](https://www.credly.com/badges/ffa5c1c1-cb8d-4eb4-8338-a4240fc33e2a/public_url)
+- [LFD121: Developing Secure Software](https://www.credly.com/badges/77f6ccda-e4d5-41b5-b1f7-c389474eef3c/public_url)
 
 ### Community contribution 社群貢獻
 
+- SITCON Hackathon 2024 Rust Taiwan 社群攤位志工 (2024)
 - ModernWeb'19 Mozilla/Rust Taiwan 社群攤位志工 (2019)
 - Rust Taiwan Rust 官網繁體中文翻譯 (2019)
 - 第五屆淡江黑客松 HackTKU 籌辦人 (2017 ~ 2018)
