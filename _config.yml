@@ -111,13 +111,22 @@ theme_config:
     projects: http://github.com/jtr860830
     about: /about/
   social_links:
-    - facebook: https://www.facebook.com/jtr860830
-    - instagram: https://www.instagram.com/jtr860830
-    - linkedin: https://www.linkedin.com/in/jtr860830
-    - medium: https://medium.com/@jtr860830
-    - github: http://github.com/jtr860830
-    - mail: mailto:me@josh-hsieh.tw
-    - telegram: https://t.me/jtr860830
+    - icon: github
+      link: http://github.com/jtr860830
+    - icon: mail
+      link: mailto:me@josh-hsieh.tw
+    - icon: telegram
+      link: https://t.me/jtr860830
+    - icon: facebook
+      link: https://www.facebook.com/jtr860830
+    - icon: instagram
+      link: https://www.instagram.com/jtr860830
+    - icon: twitter
+      link: https://x.com/jtr860830
+    - icon: linkedin
+      link: https://www.linkedin.com/in/jtr860830
+  posts_overview:
+    show_all_posts: true
 
 # gravatar
 gravatar:
