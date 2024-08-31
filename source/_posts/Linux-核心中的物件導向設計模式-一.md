@@ -3,7 +3,6 @@ title: Linux 核心中的物件導向設計模式 (一)
 date: 2024-08-30 18:07:34
 categories:
   - Operating System
-  - Software Engineering
 tags:
   - C
   - OOP
