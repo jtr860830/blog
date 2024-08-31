@@ -10,7 +10,10 @@ tags:
   - Translation
 ---
 
-> [Object-oriented design patterns in the kernel, part 1](https://lwn.net/Articles/444910) > [name=Neil Brown] 1 June 2011
+[![hackmd-github-sync-badge](https://hackmd.io/wzt18MbQTEeNBMA9D-fo-w/badge)](https://hackmd.io/wzt18MbQTEeNBMA9D-fo-w)
+
+> [Object-oriented design patterns in the kernel, part 1](https://lwn.net/Articles/444910)
+> [name=Neil Brown] 1 June 2011
 
 儘管 Linux 核心大部分使用 C 語言撰寫，它廣泛運用了物件導向程式設計領域中的一些技巧。想要使用這些物件導向技巧的開發者在 C 語言中很少相關的支援或指導，因此只能透過自行探索。通常這樣是一把雙面刃。開發者擁有足夠的靈活性來做出很酷的事情，同時也擁有做出非常愚蠢的事情的靈活性，而乍看之下，往往不好判斷是哪種情況，或者更準確地說: 某個特定方法在這個光譜上的哪個位置。
 
