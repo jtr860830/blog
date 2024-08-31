@@ -25,7 +25,9 @@ BDD (Behavior Driven Development) 是 TDD 的改版，跟 TDD 同樣地先撰寫
 創建專案資料夾，並進入專案資料夾，如果不熟悉指令操作，直接用編輯器打開整個資料夾比較方便，並依序用下列指令初始化專案：
 
 1. `npm init`
-  - test command: `cucumber-js --require-module @babel/register`
+
+- test command: `cucumber-js --require-module @babel/register`
+
 2. `npm install cucumber @babel/core @babel/preset-env @babel/register chai`
 
 > 同樣需要 babel 去支援 ES6 語法
@@ -34,7 +36,7 @@ BDD (Behavior Driven Development) 是 TDD 的改版，跟 TDD 同樣地先撰寫
 
 ```json
 {
-  "presets": [ "@babel/preset-env" ]
+  "presets": ["@babel/preset-env"]
 }
 ```
 
@@ -43,6 +45,7 @@ BDD (Behavior Driven Development) 是 TDD 的改版，跟 TDD 同樣地先撰寫
 跟第一篇一樣以加減函數為範例，在專案資料夾底下新增 features 資料夾，並在裡面新增 cal.feature 檔案，內容如下：
 
 中文版:
+
 ```gherkin
 #language: zh-TW
 功能: 計算機
@@ -62,6 +65,7 @@ BDD (Behavior Driven Development) 是 TDD 的改版，跟 TDD 同樣地先撰寫
 ```
 
 英文版:
+
 ```gherkin
 Feature: Calculator
   In order to calculate
@@ -94,35 +98,35 @@ Feature: Calculator
 
 ```javascript
 // features/step_definitions/cal.step.js
-import { Given, When, Then } from "cucumber"
-import * as chai from "chai"
+import { Given, When, Then } from "cucumber";
+import * as chai from "chai";
 
-chai.should()
+chai.should();
 
-Given('the first number is {int}', function (first) {
+Given("the first number is {int}", function (first) {
   // Write code here that turns the phrase above into concrete actions
-  this.first = first
-})
+  this.first = first;
+});
 
-Given('the second number is {int}', function (second) {
+Given("the second number is {int}", function (second) {
   // Write code here that turns the phrase above into concrete actions
-  this.second = second
-})
+  this.second = second;
+});
 
-When('add two number', function () {
+When("add two number", function () {
   // Write code here that turns the phrase above into concrete actions
-  this.result = add(this.first, this.second)
-})
+  this.result = add(this.first, this.second);
+});
 
-Then('result should be {int}', function (result) {
+Then("result should be {int}", function (result) {
   // Write code here that turns the phrase above into concrete actions
-  this.result.should.be.equal(result)
-})
+  this.result.should.be.equal(result);
+});
 
-When('the first number minus the second', function () {
+When("the first number minus the second", function () {
   // Write code here that turns the phrase above into concrete actions
-  this.result = minus(this.first, this.second)
-})
+  this.result = minus(this.first, this.second);
+});
 ```
 
 - 這次斷言的套件使用 Chai，選擇 should 風格的敘述
@@ -136,17 +140,14 @@ When('the first number minus the second', function () {
 
 ```javascript
 function add(x, y) {
-  return x + y
+  return x + y;
 }
 
 function minus(x, y) {
-  return x - y
+  return x - y;
 }
 
-export {
-  add, 
-  minus
-}
+export { add, minus };
 ```
 
 最後記得在 cal.step.js 中 `import { add, minus } from "../../cal"` 就能夠進行測試了，結果如下：

@@ -32,7 +32,9 @@ TDD (Test Driven Development) 為測試導向的開發模式，簡單來說就�
 創建專案資料夾，並進入專案資料夾，如果不熟悉指令操作，直接用編輯器打開整個資料夾比較方便，並依序用下列指令初始化專案：
 
 1. `npm init`
-  -  test command: `mocha --compilers js:@babel/register`
+
+- test command: `mocha --compilers js:@babel/register`
+
 2. `npm install mocha @babel/core @babel/preset-env @babel/register`
 
 > 安裝 babel 是因為我想用 ES6 module 的語法，而 mocha 還尚未支援
@@ -41,7 +43,7 @@ TDD (Test Driven Development) 為測試導向的開發模式，簡單來說就�
 
 ```json
 {
-  "presets": [ "@babel/preset-env" ]
+  "presets": ["@babel/preset-env"]
 }
 ```
 
@@ -50,27 +52,27 @@ TDD (Test Driven Development) 為測試導向的開發模式，簡單來說就�
 以簡單的加減函數為範例，在專案資料夾底下新增 test 資料夾，並在裡面新增 cal.test.js 檔案，內容如下：
 
 ```javascript
-import * as assert from 'assert'
+import * as assert from "assert";
 
-describe('add function', function () {
-  it('add(1, 2) = 3', function () {
-    assert.deepStrictEqual(add(1, 2), 3)
-  })
+describe("add function", function () {
+  it("add(1, 2) = 3", function () {
+    assert.deepStrictEqual(add(1, 2), 3);
+  });
 
-  it('add(1, -2) = -1', function () {
-    assert.deepStrictEqual(add(1, -2), -1)
-  })
-})
+  it("add(1, -2) = -1", function () {
+    assert.deepStrictEqual(add(1, -2), -1);
+  });
+});
 
-describe('minus function', function () {
-  it('minus(1, 2) = -1', function () {
-    assert.deepStrictEqual(minus(1, 2), -1)
-  })
+describe("minus function", function () {
+  it("minus(1, 2) = -1", function () {
+    assert.deepStrictEqual(minus(1, 2), -1);
+  });
 
-  it('minus(1, -2) = 3', function () {
-    assert.deepStrictEqual(minus(1, -2), 3)
-  })
-})
+  it("minus(1, -2) = 3", function () {
+    assert.deepStrictEqual(minus(1, -2), 3);
+  });
+});
 ```
 
 - `assert` 是 Node.js 內建的套件，作用是為了標示與驗證程式開發者預期的結果。當程式執行到斷言的位置時，對應的斷言應該為 true。 若 assert 不為 true 時，程式會中止執行，並給出錯誤訊息
@@ -86,17 +88,14 @@ describe('minus function', function () {
 
 ```javascript
 function add(x, y) {
-  return x + y
+  return x + y;
 }
 
 function minus(x, y) {
-  return x - y
+  return x - y;
 }
 
-export {
-  add, 
-  minus
-}
+export { add, minus };
 ```
 
 之後在測試檔最上面補上 `import { add, minus } from '../cal.js'` 再進行測試 `npm test`，就能看到結果為 pass

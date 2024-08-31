@@ -57,6 +57,7 @@ This command will generate a go-fn directory contains a simple template function
 
 1. Create a Docker Hub account
 2. Add your Docker Hub username to go-fn.yml file's image tag
+
 ```yml
 functions:
   go-fn:
@@ -64,6 +65,7 @@ functions:
     handler: ./go-fn
     image: USERNAME/go-fn:latest
 ```
+
 3. Build docker image: `faas-cli build -f go-fn.yml`
 4. Push to Docker Hub: `faas-cli push -f go-fn.yml`
 
@@ -85,6 +87,7 @@ Then you can see this function in the dashboard. Invoke it by using dashboard UI
 2. Import some third-party package in handler.go
 
 example:
+
 ```go
 package function
 
@@ -111,7 +114,7 @@ func Handle(req []byte) string {
 2. Clone this repository
 3. Create vendor in go-fn directory
 4. Modify yml file's Docker Hub username in image tag
-5. Deploy function 
+5. Deploy function
 
 ## Reference
 
