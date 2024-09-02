@@ -9,16 +9,6 @@ date: 2023-04-06 13:21:02
 
 My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a student/software engineer/hacker based in Taiwan and I'm currently working on my master's degree at National Chi Nan University. Lately, I've been diving into learning the Rust programming language, as well as stuff related to operating systems and networking.
 
-## Contact 聯繫方式
-
-- [Facebook](https://www.facebook.com/jtr860830)
-- [Instagram](https://www.instagram.com/jtr860830)
-- [LinkedIn](https://www.linkedin.com/in/jtr860830)
-- [Medium](https://medium.com/@jtr860830)
-- [GitHub](http://github.com/jtr860830)
-- [work email](mailto:dev@josh-hsieh.tw)
-- [personal email](mailto:me@josh-hsieh.tw)
-
 ## Outlines 經歷
 
 ### Work experiences 工作經驗
@@ -58,3 +48,13 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 - 國立暨南大學資訊管理學系 碩士班 (2022 ~ **present**)
 - 私立淡江大學資訊管理學系 學士班 (2015 ~ 2018 肄業)
 - 私立明道高級中學
+
+## Contact 聯繫方式
+
+- [Email](mailto:me@josh-hsieh.tw)
+- [Telegram](https://t.me/jtr860830)
+- [Facebook](https://www.facebook.com/jtr860830)
+- [Instagram](https://www.instagram.com/jtr860830)
+- [Twitter](https://x.com/jtr860830)
+- [LinkedIn](https://www.linkedin.com/in/jtr860830)
+- [GitHub](http://github.com/jtr860830)
