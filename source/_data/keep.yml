@@ -9,7 +9,7 @@
 # ---------------------------------------------------------------------------------------
 base_info:
   # Theme primary color
-  primary_color: "#0066cc"
+  primary_color: "#c678dd"
 
   # Blog website title
   title: Josh's Blog
@@ -21,10 +21,10 @@ base_info:
   avatar: /images/avatar.jpg
 
   # Website LOGO, You can use local image path or image link
-  logo: /images/logo.svg
+  logo: /images/logo.png
 
   # Website favicon, You can use local image path or image link
-  favicon: /images/logo.svg
+  favicon: /images/logo.png
 
 # ---------------------------------------------------------------------------------------
 # Docs: https://keep-docs.xpoet.cn/basis/configuration-guide/menu.html
