@@ -13,7 +13,7 @@ code_block_shrink: false
 
 [![hackmd-github-sync-badge](https://hackmd.io/wzt18MbQTEeNBMA9D-fo-w/badge)](https://hackmd.io/wzt18MbQTEeNBMA9D-fo-w)
 
-> [Object-oriented design patterns in the kernel, part 1](https://lwn.net/Articles/444910)
+> 譯自 [Object-oriented design patterns in the kernel, part 1](https://lwn.net/Articles/444910)
 > [name=Neil Brown] 1 June 2011
 
 儘管 Linux 核心大部分使用 C 語言撰寫，它廣泛運用了物件導向程式設計領域中的一些技巧。想要使用這些物件導向技巧的開發者在 C 語言中很少相關的支援或指導，因此只能透過自行探索。通常這樣是一把雙面刃。開發者擁有足夠的靈活性來做出很酷的事情，同時也擁有做出非常愚蠢的事情的靈活性，而乍看之下，往往不好判斷是哪種情況，或者更準確地說: 某個特定方法在這個光譜上的哪個位置。
@@ -156,15 +156,14 @@ VFS 用於快取檔案系統資訊的資料結構之一是 `dentry`。一個 `de
 
 如果我們將在 Linux 中發現的所有模式元素結合起來，我們可以發現:
 
-:::info
-操作特定類型物件的方法指標通常會被蒐集在一個直接與該物件相關聯的 vtable 中，但它們也可以出現在以下情況中:
-
-- 在一個 mixin vtable 中，該 vtable 收集了相關的功能，這些功能可以獨立於物件的基本類型進行選擇
-- 在親代物件的 vtable 中，這樣做可以避免在多數物件中需要一個 vtable 指標。
-- 直接嵌入到物件中，當函式指標很少或它們需要為特定物件量身定制時。
-
-這些 vtable 很少包含函式指標以外的東西，儘管為物件類別註冊所需的欄位是合適的。允許這些函式指標為 NULL 是一種常見的處理預設值的技巧但不一定理想。
-:::
+> [!Note]
+> 操作特定類型物件的方法指標通常會被蒐集在一個直接與該物件相關聯的 vtable 中，但它們也可以出現在以下情況中:
+>
+> - 在一個 mixin vtable 中，該 vtable 收集了相關的功能，這些功能可以獨立於物件的基本類型進行選擇
+> - 在親代物件的 vtable 中，這樣做可以避免在多數物件中需要一個 vtable 指標。
+> - 直接嵌入到物件中，當函式指標很少或它們需要為特定物件量身定制時。
+>
+> 這些 vtable 很少包含函式指標以外的東西，儘管為物件類別註冊所需的欄位是合適的。允許這些函式指標為 NULL 是一種常見的處理預設值的技巧但不一定理想。
 
 所以在探索 Linux 核心程式碼時，我們發現即使它不是用物件導向程式語言撰寫的，它確實包含物件、類別 (以 vtable 表示)，甚至 mixin。它還包含了物件導向語言中通常沒有的概念，比如將物件方法委派給親代物件。
 
