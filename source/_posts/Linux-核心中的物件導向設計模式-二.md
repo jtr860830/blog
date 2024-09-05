@@ -11,7 +11,10 @@ tags:
 code_block_shrink: false
 ---
 
-> 譯自 [Object-oriented design patterns in the kernel, part 2](https://lwn.net/Articles/446317) > [name=Neil Brown] 7 June 2011
+[![hackmd-github-sync-badge](https://hackmd.io/R_teixpOTMmUOk-e3JMHjg/badge)](https://hackmd.io/R_teixpOTMmUOk-e3JMHjg)
+
+> 譯自 [Object-oriented design patterns in the kernel, part 2](https://lwn.net/Articles/446317)
+> [name=Neil Brown] 7 June 2011
 
 在這份分析的第一部分中，我們探討了 Linux 核心中如何使用一般的 C 語言語法來實作物件導向程式設計中的多型 (polymorphic)。我們特別研究了方法分派，探討 vtable 的不同形式，以及在何種情況下會避免使用獨立的 vtable，而選擇將函式指標直接儲存在物件中。在這個結論部分，我們將探討物件導向程式設計的另一個重要觀點 —— 繼承 (inheritance)，尤其是資料繼承。
 
