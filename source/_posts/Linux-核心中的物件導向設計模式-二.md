@@ -52,7 +52,7 @@ union {
 
 第二個困難在於檔案系統必須負責分配 `inode`，因為通用的程式碼不再能夠分配正確大小的空間，因為它沒有足夠的資訊。為了解決這個問題，只需在 `super_operations` 結構體中[新增](http://git.kernel.org/?p=linux/kernel/git/tglx/history.git;a=blobdiff;f=include/linux/fs.h;h=4e5de1286d87969509d812eb9c2f813ae61fd252;hp=a01f0c3b4d34df475a84532417c42d46eb0974ed;hb=468e6d17ff42e6f291a88c87681b2b5e34e9ab33;hpb=d694597ed5e1f6613d0933ee692333ab2542b603) `alloc_inode()` 和 `destroy_inode()` 方法並適當呼叫它們。
 
-## `void` 指標 (`void` pointers)
+## void 指標 (void pointers)
 
 如前所述，`union` 模式並不是新增檔案系統的無法逾越的障礙。這是因為 `union u` 還有一個不是 `inode_info` 結構體的欄位。在 Linux-1.0.5 中[新增](http://git.kernel.org/?p=linux/kernel/git/history/history.git;a=commitdiff;h=4aad5d636d7c5a543a82757d9be2e3f3e5c6724f#patch14)了一個名為 `generic_ip` 的通用指標欄位，但直到 1.3.7 才開始使用。任何沒有在 `struct inode` 本身中擁有結構體的檔案系統都可以定義並分配一個單獨的結構體，並通過 `u.generic_ip` 將其連接到 `inode`。這種方法解決了 `union` 的兩個問題，因為不需要對共享的宣告進行任何更改，每個檔案系統只使用其需要的空間。然而它再次引入了自身的新問題。
 
@@ -62,7 +62,7 @@ union {
 
 儘管這種模式存在問題，但它仍然被廣泛使用。`struct super_block` 具有一個 `s_fs_info` 指標，其用途與 `u.generic_ip` 相同 (後者在 `union u` 最終被移除後更名為 `i_private` —— 為何沒有徹底移除，這留給讀者自行探討)。這是將檔案系統私有資料儲存在 `super_block` 中的唯一方式。簡單搜尋 Linux 的檔案，會發現有相當多的欄位是名為 **private** 或類似名稱的 `void` 指標。這些欄位中有許多是通過使用指向私有擴充的指標來擴充資料型別的例子，其中大多數都可以轉換為使用嵌入式結構體的模式。
 
-## `inodes` 之外 (Beyond `inodes`)
+## inodes 之外 (Beyond inodes)
 
 雖然 `inode` 是介紹這三種模式的有效載體，但它們並未充分展示這些模式的全部範圍，因此我們有必要進一步探討，看看還能學到什麼。
 
@@ -74,7 +74,7 @@ union {
 
 對於我們的目的來說，無論我們如何稱呼它，只要知道何時使用哪種模式。核心中的例子清楚地表明，當所有變體由單一模組理解時，`union` 就是非常合適的變體結構機制，不管是否將其視為使用資料繼承。當不同的子型別由不同的模組或至少是彼此分開的程式碼片段管理時，則更傾向於使用其他機制。這種情況下使用 `union` 的做法幾乎已經消失，目前僅剩 [`struct cycx_device`](http://lxr.linux.no/#linux+v2.6.39/include/linux/cyclomx.h#L43) 作為過時模式的例子。
 
-## `void` 指標的問題 (Problems with `void` pointers)
+## void 指標的問題 (Problems with void pointers)
 
 `void` 指標不太容易分類。可以說，`void` 指標在現代相當於 `goto` 敘述。它們可以非常有用，但也可能導致非常迂迴的設計。特別的問題在於: 當你看到一個 `void` 指標時，就像看到一個 `goto` 一樣，你並不知道它實際指向什麼。一個名為 `private` 的 `void` 指標甚至更糟糕 —— 就像一個 `goto destination` 指令 —— 如果不閱讀大量上下文，它幾乎沒有意義。
 
@@ -84,7 +84,7 @@ union {
 
 然而 `struct seq_file` 的 `private` 欄位在 [`svc_pool_stats_open()`](http://lxr.linux.no/#linux+v2.6.39/net/sunrpc/svc_xprt.c#L1239) 中以一種微妙但重要的不同方式使用。在這種情況下，所需的額外資料只是一個指標。所以 `svc_pool_stats_open` 並沒有分配一個本地資料結構來參考該 `private` 欄位，而是直接將該指標存儲在 `private` 欄位中。這似乎是一個合理的最佳化 —— 為了儲存一個指標而進行分配是浪費資源 —— 但這正好突顯了先前提到的混淆原因: 當你看到一個 `void` 指標時，你並不真正知道它指向什麼或為什麼會這樣使用。
 
-為了更清楚地說明這裡發生的事情，可以將 `void *private` 想像成每一種不同指標型別的一 `union`。如果需要儲存的值是一個指標，它可以按照 「**`union` 用於資料繼承**」的模式儲存在這個 `union` 中。如果該值不僅僅是一個指標，那麼它會按照「**`void` 指標用於資料繼承**」的模式儲存在分配的空間中。因此，當我們看到一個 `void` 指標正在使用時，可能並不容易判斷它是用來指向一個資料繼承的擴充結構，還是本身被用作資料繼承的擴充 (或是用於其他用途)。
+為了更清楚地說明這裡發生的事情，可以將 `void *private` 想像成每一種不同指標型別的一 `union`。如果需要儲存的值是一個指標，它可以按照 「`union` 用於資料繼承」的模式儲存在這個 `union` 中。如果該值不僅僅是一個指標，那麼它會按照「`void` 指標用於資料繼承」的模式儲存在分配的空間中。因此，當我們看到一個 `void` 指標正在使用時，可能並不容易判斷它是用來指向一個資料繼承的擴充結構，還是本身被用作資料繼承的擴充 (或是用於其他用途)。
 
 從另一個角度來強調這個問題，研究 [`struct v4l2_subdev`](http://lxr.linux.no/#linux+v2.6.39/include/media/v4l2-subdev.h#L490) 是有意義的，它代表 video4linux 裝置中的子裝置，例如網路攝影機中的感測器或相機控制器。根據 (相當有幫助的) 文件，預期該結構體通常會嵌入在包含額外狀態的更大的結構中。然而該結構體仍然有兩個 `void` 指標，且名稱都表示它們是子型別私有的:
 
@@ -94,13 +94,13 @@ void *dev_priv;
 void *host_priv;
 ```
 
-v4l 子裝置 (通常是感測器) 通常會由像是 I2C 裝置實作 (就像儲存檔案系統的區塊裝置可能由 ATA 或 SCSI 裝置實作一樣)。為了應對這種常見情況，`struct v4l2_subdev` 提供了一個 `void` 指標 `dev_priv`，這樣驅動程式本身就不需要在包含 `struct v4l2_subdev` 的更大結構體中定義一個更具體的指標。`host_priv` 的目的是指向一個**親代裝置**，例如從感測器獲取影片資料的控制器。在使用此欄位的三個驅動程式中，有[一個](http://lxr.linux.no/#linux+v2.6.39/drivers/media/video/omap3isp/isp.c#L1751)似乎遵循了這個意圖，而[另外](http://lxr.linux.no/#linux+v2.6.39/drivers/media/video/pxa_camera.c#L1276)[兩個](http://lxr.linux.no/#linux+v2.6.39/drivers/media/video/sh_mobile_ceu_camera.c#L904)則將其用來指向分配的擴充結構。因此，這兩個指標都預期是按照「**`union` 用於資料繼承**」的模式使用，其中 `void` 指標用作多種其他指標型別的 `union`，但它們並不總是按照這種方式使用。
+v4l 子裝置 (通常是感測器) 通常會由像是 I2C 裝置實作 (就像儲存檔案系統的區塊裝置可能由 ATA 或 SCSI 裝置實作一樣)。為了應對這種常見情況，`struct v4l2_subdev` 提供了一個 `void` 指標 `dev_priv`，這樣驅動程式本身就不需要在包含 `struct v4l2_subdev` 的更大結構體中定義一個更具體的指標。`host_priv` 的目的是指向一個**親代裝置**，例如從感測器獲取影片資料的控制器。在使用此欄位的三個驅動程式中，有[一個](http://lxr.linux.no/#linux+v2.6.39/drivers/media/video/omap3isp/isp.c#L1751)似乎遵循了這個意圖，而[另外](http://lxr.linux.no/#linux+v2.6.39/drivers/media/video/pxa_camera.c#L1276)[兩個](http://lxr.linux.no/#linux+v2.6.39/drivers/media/video/sh_mobile_ceu_camera.c#L904)則將其用來指向分配的擴充結構。因此，這兩個指標都預期是按照「`union` 用於資料繼承」的模式使用，其中 `void` 指標用作多種其他指標型別的 `union`，但它們並不總是按照這種方式使用。
 
 目前尚不清楚: 定義此 `void` 指標以備不時之需是否真的是一個有價值的服務，因為裝置驅動程式完全可以在擴充結構中輕鬆定義自己具備型別安全的指標。顯然一個看似**私有**的 `void` 指標可能被用於各種性質上完全不同的用途，而且正如我們在兩個不同情境中所見，它們的使用方式可能與預期不完全相符。
 
-簡而言之，辨別「**透過 `void` 指標進行資料繼承**」的模式並不容易。需要對程式碼進行相當深入的檢查，才能確定 `void` 指標的具體目的和使用方式。
+簡而言之，辨別「透過 `void` 指標進行資料繼承」的模式並不容易。需要對程式碼進行相當深入的檢查，才能確定 `void` 指標的具體目的和使用方式。
 
-## 轉移到 `struct page` (A diversion into `struct page`)
+## 轉移到 struct page (A diversion into struct page)
 
 在結束對 `union` 和 `void` 指標的討論之前，看看 [`struct page`](http://lxr.linux.no/#linux+v2.6.39/include/linux/mm_types.h#L34) 可能會很有趣。這個結構使用了這兩種模式，儘管它們因歷史包袱而有些隱晦。這個例子特別具有啟發性，因為它是 `struct` 嵌入不可行的一個案例。
 
