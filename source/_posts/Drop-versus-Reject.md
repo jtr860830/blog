@@ -6,9 +6,14 @@ categories:
 tags:
   - Firewall
   - Translation
+code_block_shrink: false
 ---
 
-> 譯自 [Drop versus Reject](https://www.chiark.greenend.org.uk/~peterb/network/drop-vs-reject) > [name=Peter Benie <peterb@chiark.greenend.org.uk>]
+[![hackmd-github-sync-badge](https://hackmd.io/5mHJ-CziSKS7yMUDvWLnTw/badge)](https://hackmd.io/5mHJ-CziSKS7yMUDvWLnTw)
+
+
+> 譯自 [Drop versus Reject](https://www.chiark.greenend.org.uk/~peterb/network/drop-vs-reject)
+> [name=Peter Benie <peterb@chiark.greenend.org.uk>]
 
 許多人提倡使用一種**幾乎封閉**的策略來設定封包過濾器 (packet filters)，將不知道是否安全的封包直接丟棄 (drop)。這種策略在不增加額外安全性的情況下，會導致使用者難以診斷相關的問題。
 
