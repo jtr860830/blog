@@ -39,8 +39,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       hexo-theme-keep:
-        specifier: ^4.2.2
-        version: 4.2.2
+        specifier: ^4.2.3
+        version: 4.2.3
       hexo-wordcount:
         specifier: ^6.0.1
         version: 6.0.1
@@ -424,8 +424,8 @@ packages:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
 
-  hexo-theme-keep@4.2.2:
-    resolution: {integrity: sha512-PW0rlsMQG4edrn1V3n/7vbJhkyjwgaj5Gzq4II1ls51iw2fiVFQiG3qaBTuGab8eO/yxeXuSQxetCcs9KWNjPQ==}
+  hexo-theme-keep@4.2.3:
+    resolution: {integrity: sha512-lTp9W8O7b19TeDIWBqe4popPQY/COsyR51l8Le9STPCPKin/3nbaL0lKIXwT7aV7cV+VC1RkAvph2pDaFXQfpQ==}
 
   hexo-util@3.3.0:
     resolution: {integrity: sha512-YvGngXijE2muEh5L/VI4Fmjqb+/yAkmY+VuyhWVoRwQu1X7bmWodsfYRXX7CUYhi5LqsvH8FAe/yBW1+f6ZX4Q==}
@@ -1301,7 +1301,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-keep@4.2.2: {}
+  hexo-theme-keep@4.2.3: {}
 
   hexo-util@3.3.0:
     dependencies:
