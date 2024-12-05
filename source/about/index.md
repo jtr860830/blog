@@ -11,6 +11,8 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 
 ## Outlines 經歷
 
+### [Resume 簡歷](https://docs.google.com/document/d/13BsR44929g95YvRrmFVp-22UvrVIj23vPLmyfgTPv_M/edit?usp=drive_link)
+
 ### Work experiences 工作經驗
 
 - 意門科技股份有限公司 Imonology Inc. 軟體工程師 (2021 ~ **present**)
