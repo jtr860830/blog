@@ -29,6 +29,7 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 ### Certificate 證照
 
 - [LFCS: Linux Foundation Certified Systems Administrator](https://www.credly.com/badges/9d25789f-6b3c-42dc-95a8-93b1aa6e298f/public_url)
+- [LFS258: Kubernetes Fundamentals](https://www.credly.com/badges/d12f67cd-1b63-48b7-b3a0-83c448f68c95/public_url)
 - [LFS207: Linux System Administration Essentials](https://www.credly.com/badges/ffa5c1c1-cb8d-4eb4-8338-a4240fc33e2a/public_url)
 - [LFD121: Developing Secure Software](https://www.credly.com/badges/77f6ccda-e4d5-41b5-b1f7-c389474eef3c/public_url)
 
