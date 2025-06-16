@@ -15,9 +15,9 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 
 ### Work experiences 工作經驗
 
-- 意門科技股份有限公司 Imonology Inc. 軟體工程師 (2021 ~ **present**)
-- 常仁股份有限公司 JCF Inc. 軟體工程師 (2021 ~ **present**)
-- 國立暨南大學資訊管理學系 Linux 作業系統實務 助教 (2023 ~ **present**)
+- 意門科技股份有限公司 Imonology Inc. 軟體工程師 (2021 ~ 2025)
+- 常仁股份有限公司 JCF Inc. 軟體工程師 (2021 ~ 2025)
+- 國立暨南大學資訊管理學系 Linux 作業系統實務 助教 (2023 ~ 2025)
 - 億亨數位應用有限公司 Billionaire Co., Ltd. 後端工程師 (2022 ~ 2023)
 - 資旅軟體開發有限公司 GLSoft Co., Ltd. 軟體工程師 (2022)
 - 亞虎科技股份有限公司 YaHuTech Inc. 後端工程師 (2021 ~ 2022)
@@ -48,7 +48,7 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 
 ### Education background 學歷
 
-- 國立暨南大學資訊管理學系 碩士班 (2022 ~ **present**)
+- 國立暨南大學資訊管理學系 碩士班 (2022 ~ 2025)
 - 私立淡江大學資訊管理學系 學士班 (2015 ~ 2018 肄業)
 - 私立明道高級中學
 
