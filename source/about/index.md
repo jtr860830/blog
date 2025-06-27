@@ -54,7 +54,7 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 
 ## Contact 聯繫方式
 
-- [Email](mailto:me@jyh.im)
+- [Email](mailto:me@josh.tw)
 - [Telegram](https://t.me/jtr860830)
 - [Facebook](https://www.facebook.com/jtr860830)
 - [Instagram](https://www.instagram.com/jtr860830)
