@@ -21,8 +21,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       hexo-generator-searchdb:
-        specifier: ^1.4.0
-        version: 1.4.1(chokidar@3.6.0)
+        specifier: ^1.5.0
+        version: 1.5.0(chokidar@3.6.0)
       hexo-generator-tag:
         specifier: ^2.0.0
         version: 2.0.0
@@ -389,8 +389,8 @@ packages:
     resolution: {integrity: sha512-KeM7mOCKWINGFAk1E+CkjMMgqFIv8oaRbGxR7ipkQAp44o4aopkVftma4sdIplOq9WQEWfVYDUK5gEv9J3nzUg==}
     engines: {node: '>=18'}
 
-  hexo-generator-searchdb@1.4.1:
-    resolution: {integrity: sha512-7m8IBpZbI6iKb2jRYxs4pghD6Ln8ylQSRGl6MIC4G9wws21vYSXSD8rvC3MoCO+pWBHs6E/mTA/rjG+p2AZfVg==}
+  hexo-generator-searchdb@1.5.0:
+    resolution: {integrity: sha512-d0b5SueDxJimTFaHpPg430FQFx7DtMkmEIHo0UTOjXWRy+eDqNSp1CuS04P7fWzMnH2h+aQc6O9D2yY+3sdAUg==}
 
   hexo-generator-tag@2.0.0:
     resolution: {integrity: sha512-1px/hF3veEohWDN8jjzchQhaiz+uOStUvvMaBJC9vWOlALh30UFcapL8IrvAwwJZjFRVA+WqGgDRqoQ8+yaaFw==}
@@ -604,7 +604,7 @@ packages:
     engines: {node: '>= 0.8.0'}
 
   ms@2.0.0:
-    resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
+    resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -1245,7 +1245,7 @@ snapshots:
     dependencies:
       hexo-pagination: 3.0.0
 
-  hexo-generator-searchdb@1.4.1(chokidar@3.6.0):
+  hexo-generator-searchdb@1.5.0(chokidar@3.6.0):
     dependencies:
       nunjucks: 3.2.4(chokidar@3.6.0)
     transitivePeerDependencies:
