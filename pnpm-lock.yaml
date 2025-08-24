@@ -39,8 +39,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       hexo-theme-keep:
-        specifier: ^4.2.3
-        version: 4.2.3
+        specifier: ^4.2.5
+        version: 4.2.5
       hexo-wordcount:
         specifier: ^6.0.1
         version: 6.0.1
@@ -424,8 +424,8 @@ packages:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
 
-  hexo-theme-keep@4.2.3:
-    resolution: {integrity: sha512-lTp9W8O7b19TeDIWBqe4popPQY/COsyR51l8Le9STPCPKin/3nbaL0lKIXwT7aV7cV+VC1RkAvph2pDaFXQfpQ==}
+  hexo-theme-keep@4.2.5:
+    resolution: {integrity: sha512-VAMgfA80o2hhQ9kWU4OBihlcvRXETHusxTQ6tH/v6YQIZLMvf3rax1cCDyp80SeqFHP6GG70Wr+1oM2AwoKfLA==}
 
   hexo-util@3.3.0:
     resolution: {integrity: sha512-YvGngXijE2muEh5L/VI4Fmjqb+/yAkmY+VuyhWVoRwQu1X7bmWodsfYRXX7CUYhi5LqsvH8FAe/yBW1+f6ZX4Q==}
@@ -604,7 +604,7 @@ packages:
     engines: {node: '>= 0.8.0'}
 
   ms@2.0.0:
-    resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
+    resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -1301,7 +1301,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-keep@4.2.3: {}
+  hexo-theme-keep@4.2.5: {}
 
   hexo-util@3.3.0:
     dependencies:
