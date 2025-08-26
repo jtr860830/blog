@@ -13,6 +13,8 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 
 ### [Resume 簡歷](https://docs.google.com/document/d/13BsR44929g95YvRrmFVp-22UvrVIj23vPLmyfgTPv_M/edit?usp=drive_link)
 
+### [Certificate 證照](https://www.linkedin.com/in/jtr860830/details/certifications/)
+
 ### Work experiences 工作經驗
 
 - 意門科技股份有限公司 Imonology Inc. 軟體工程師 (2021 ~ 2025)
@@ -26,11 +28,6 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 - 中華電信系統開發部門 實習生 (2019)
 - 淡江大學資訊管理學系程式設計工作坊 助教 (2017)
 
-### Certificate 證照
-
-- [CKA: Certified Kubernetes Administrator](https://www.credly.com/badges/15ede0ce-c017-4446-b72c-e350cae148a8/public_url)
-- [LFCS: Linux Foundation Certified Systems Administrator](https://www.credly.com/badges/9d25789f-6b3c-42dc-95a8-93b1aa6e298f/public_url)
-
 ### Community contribution 社群貢獻
 
 - SITCON Hackathon 2024 Rust Taiwan 社群攤位志工 (2024)
@@ -40,10 +37,6 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 - 淡江大學資訊管理學系網路策進會 IMNA 負責人 (2017 ~ 2018)
 - 淡江大學資訊顧問室 TKUICO 負責人 (2017 ~ 2018)
 
-### Competition 競賽
-
-- THITCAMP CTF 第一名 (2017)
-
 ### Education background 學歷
 
 - 國立暨南大學資訊管理學系 碩士班 (2022 ~ 2025)
@@ -52,7 +45,7 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 
 ## Contact 聯繫方式
 
-- [Email](mailto:me@jyh.im)
+- [Email](mailto:me@josh.tw)
 - [Telegram](https://t.me/jtr860830)
 - [Facebook](https://www.facebook.com/jtr860830)
 - [Instagram](https://www.instagram.com/jtr860830)
