@@ -7,13 +7,13 @@ date: 2023-04-06 13:21:02
 
 ## Bio 簡介
 
-My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a student/software engineer/hacker based in Taiwan and I'm currently working on my master's degree at National Chi Nan University. Lately, I've been diving into learning the Rust programming language, as well as stuff related to operating systems and networking.
+My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English, a software engineer from Taiwan focused on systems programming, infrastructure, and security. I enjoy working with Rust, Linux, and container technologies.
 
 ## Outlines 經歷
 
 ### [Resume 簡歷](https://docs.google.com/document/d/13BsR44929g95YvRrmFVp-22UvrVIj23vPLmyfgTPv_M/edit?usp=drive_link)
 
-### [Certificate 證照](https://www.linkedin.com/in/jtr860830/details/certifications/)
+### [Certificates 證照](https://www.linkedin.com/in/jtr860830/details/certifications/)
 
 ### Work experiences 工作經驗
 
@@ -28,7 +28,7 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English. I'm a stu
 - 中華電信系統開發部門 實習生 (2019)
 - 淡江大學資訊管理學系程式設計工作坊 助教 (2017)
 
-### Community contribution 社群貢獻
+### Community contributions 社群貢獻
 
 - SITCON Hackathon 2024 Rust Taiwan 社群攤位志工 (2024)
 - ModernWeb'19 Mozilla/Rust Taiwan 社群攤位志工 (2019)
