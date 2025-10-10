@@ -8,6 +8,8 @@ tags:
 code_block_shrink: false
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/18N_YujRTeWWdAvBdGwygw/badge)](https://hackmd.io/18N_YujRTeWWdAvBdGwygw)
+
 物件導向程式設計的三大核心概念: **封裝 (Encapsulation)**、**繼承 (Inheritance)**、**多型 (Polymorphism)**，而 **Interface** 是**實現多型的一種重要方式**。
 
 > 並非只有 interface 能實現多型，繼承 (inheritance) 與方法覆寫 (override) 也能達到相同目的
