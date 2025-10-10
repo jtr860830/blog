@@ -61,7 +61,7 @@ class Cat implements Animal {
 
 ## Java 的範例: `Comparable`
 
-`Comparable` 是 Java 標準函式庫中非常經典的範例。它定義了物件間的比較方式，讓像 `Collections.sort()`` 這樣的函式能夠運作。
+`Comparable` 是 Java 標準函式庫中非常經典的範例。它定義了物件間的比較方式，讓像 `Collections.sort()` 這樣的函式能夠運作。
 
 ```java
 public interface Comparable<T> {
