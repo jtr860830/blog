@@ -10,6 +10,8 @@ tags:
 code_block_shrink: false
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/VgeJlEC9S-SaECo-6gY7gw/badge)](https://hackmd.io/VgeJlEC9S-SaECo-6gY7gw)
+
 在日常的 container 管理工作中，對容器映像檔 (container image) 進行**重新命名 (打 tag)** 或**複製**、**同步 image** 是非常常見的需求。
 
 傳統上，我們會使用 Docker CLI:
