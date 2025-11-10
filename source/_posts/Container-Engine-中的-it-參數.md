@@ -10,6 +10,8 @@ tags:
 code_block_shrink: false
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/-aRwrzC5TMqZxhh8HRQ_lA/badge)](https://hackmd.io/-aRwrzC5TMqZxhh8HRQ_lA)
+
 在使用像是 Docker、Podman 或是一些 CLI 工具直接操作 containerd 這類的 runtime 時，常常會使用到 `-it` 這**兩個**參數，但很多人其實只知道加上去就能夠跟容器互動，卻不太清楚這兩個旗標 (flag) 各自代表什麼。
 
 在解釋 `-it` 之前，我們先從其中的 `-t` 講起: 它跟一個古老但很重要的東西有關——TTY。
