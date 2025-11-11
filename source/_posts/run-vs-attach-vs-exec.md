@@ -10,6 +10,8 @@ tags:
 code_block_shrink: false
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/q5J_T_HFSUCuINx62_v_5A/badge)](https://hackmd.io/q5J_T_HFSUCuINx62_v_5A)
+
 如果用過 docker、podman 之類的 container 管理工具，一定看過 `run` `attach` `exec` 這三個子命令，也大概知道它們可以**跟容器互動**，但實際上差別在哪?
 
 先來看一下 docker 啟動 container 時會用到的幾個 component 以及順序: 
