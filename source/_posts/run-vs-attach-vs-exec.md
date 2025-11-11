@@ -12,7 +12,7 @@ code_block_shrink: false
 
 如果用過 docker、podman 之類的 container 管理工具，一定看過 `run` `attach` `exec` 這三個子命令，也大概知道它們可以**跟容器互動**，但實際上差別在哪?
 
-先來看一下 docker 啟動 container 時會用到的幾個 component 以及順序:
+先來看一下 docker 啟動 container 時會用到的幾個 component 以及順序: 
 
 ```
 docker-cli (docker client)
@@ -79,10 +79,10 @@ dockerd 收到 run 的請求後，會再透過另一個 UNIX socket，用 gRPC A
 
 當 container 要真的跑起來時，containerd 會為這個 container 啟動一個 runtime shim (Docker 是 containerd-shim，podman 則是 [conmon](https://github.com/containers/conmon))，它本身是一個背景行程。這個 shim 會去呼叫 OCI runtime (通常是 runc 或 crun)，依據 OCI spec 在主機上 `fork/exec` 出 container (隔離且被限制的行程)，並在裡面啟動像 nginx 這樣的應用程式。runc 完成後就直接退出，接下來由 runtime shim 接手，持續管理這個 container。
 
-在這個過程中，被 reparent 到 PID 1 (init 行程，通常是 systemd) 的，是 shim，而不是 container 裡的應用程式本身:
+在這個過程中，被 reparent 到 PID 1 (init 行程，通常是 systemd) 的，是 shim，而不是 container 裡的應用程式本身: 
 
-- shim 會將自己轉為背景行程、reparent 到 PID 1，並將自己的 stdio stream 關掉
-- shim 接管被封裝的應用程式的 stdio stream (`stdin`、`stdout`、`stderr`)
+-  shim 會將自己轉為背景行程、reparent 到 PID 1，並將自己的 stdio stream 關掉
+-  shim 接管被封裝的應用程式的 stdio stream (`stdin`、`stdout`、`stderr`)
 
 整個 pipeline 裡，`stdin`、`stdout`、`stderr` 並不是直接從 container 連接到終端機，而是一路被轉接:
 
@@ -92,10 +92,10 @@ terminal session <-> docker-cli <-> dockerd <-> containerd <-> runtime shim <-> 
 
 同樣地，像 `Ctrl+C` 這種訊號也是由 CLI 經過 daemon 一層層轉發到容器裡的主行程。
 
-傳統把程式 daemonize (丟到背景、跟啟動它的終端機分離) 時，典型做法是:
+傳統把程式 daemonize (丟到背景、跟啟動它的終端機分離) 時，典型做法是: 
 
-- 把它 reparent 到 PID 1 (init / systemd)
-- 把它的 stdio stream 全部關閉
+-  把它 reparent 到 PID 1 (init / systemd)
+-  把它的 stdio stream 全部關閉
 
 如果 container 也是這樣實作，就看不到它的輸出、更別說從終端機輸入資料。實際上，Docker 把這套行為用在 shim 身上，同時讓 shim 接管 container 的 stdio，於是才有現在的使用體驗: 看得到 log、可以送資料到 stdin，還能 attach 及 detach。
 
@@ -105,7 +105,7 @@ terminal session <-> docker-cli <-> dockerd <-> containerd <-> runtime shim <-> 
 docker run -it --rm -d --name ubuntu ubuntu
 ```
 
-這行指令會很快結束，把控制權還給終端機。但我們可以用 attach 重新把終端機接回這個 container，讓它又看起來像前景行程:
+這行指令會很快結束，把控制權還給終端機。但我們可以用 attach 重新把終端機接回這個 container，讓它又看起來像前景行程: 
 
 ```shell
 docker attach ubuntu
@@ -121,7 +121,7 @@ docker attach ubuntu
 
 大部分 production 的應用程式都是跑在背景的 container 裡，當需要**臨時連進去**看看它目前在輸出什麼，或想直接把鍵盤輸入送進去時，`attach` 就是那條接回去的線。
 
-前面提到 runtime shim 會接管 container 的 stdio streams。具體一點來說，shim 扮演一個伺服器的角色:
+前面提到 runtime shim 會接管 container 的 stdio streams。具體一點來說，shim 扮演一個伺服器的角色: 
 
 - 在本機上提供一個 RPC 介面 (通常是 UNIX socket)
 - 當有 client 連上這個 socket 時，shim 會開始把 container 的 `stdout`、`stderr` 內容往 socket 另一端串流回去
@@ -135,7 +135,7 @@ docker attach ubuntu
 
 # `exec`
 
-`exec` 最常出現在排查和除錯的場景，例如已經有一個 container 在跑了，臨時想要:
+`exec` 最常出現在排查和除錯的場景，例如已經有一個 container 在跑了，臨時想要: 
 
 - 進去開個 shell 看環境
 - 裡面跑個 `curl`、`ping`、`ps`、`top`
@@ -158,7 +158,7 @@ docker exec -it CONTAINER curl 127.0.0.1:80
 
 這邊補充一下，OCI Runtime Spec 其實並沒有定義 `run` 或 `exec` 指令。runtime 只需要會 `create` 跟 `start` 就夠了。`exec` 只是高階一點的便利功能——底層還是透過**再 create 一個臨時的 container，然後 start** 去實作。
 
-`docker exec` 做的事情，可以想成:
+`docker exec` 做的事情，可以想成: 
 
 1. docker CLI 收到 `docker exec` 指令。
 2. 一樣透過 HTTP / gRPC 把請求送到 dockerd / containerd。
