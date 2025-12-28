@@ -8,6 +8,8 @@ tags:
   - Translation
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/B9ThJ4FmRTOXrIvgJdsDiQ/badge)](https://hackmd.io/B9ThJ4FmRTOXrIvgJdsDiQ)
+
 > 譯自 [The BPF-programmable network device](https://lwn.net/Articles/949960/)
 > [name=Jonathan Corbet]
 
