@@ -27,7 +27,7 @@ netdev_tx_t (*ndo_start_xmit)(struct sk_buff *skb, struct net_device *dev);
 
 當這個虛擬網路介面被設定完成後，可以在介面的每一個端點載入一個或多個 eBPF 程式。由於 `netkit` 的 eBPF 程式可能會影響 host 端流量的路由，因此只有 host 端被允許為 host 或 guest 載入這些程式。`netkit` 所提供的 `ndo_start_xmit()` callback，不再只是單純地將封包送回 network stack，而是會依序呼叫所有已附加的 BPF 程式，並將封包傳遞給每一個程式處理。這些 eBPF 程式可以修改封包內容 (例如變更目的地裝置)，並且必須回傳一個值說明接下來應該如何處理封包: 
 
-- `NETKIT_NEXT`: 繼續呼叫序列中的下一個 eBPF 程式 (如果有的話)。如果已經沒有其他程式需要執行，此回傳值會被視為 **NETKIT_PASS**。
+- `NETKIT_NEXT`: 繼續呼叫序列中的下一個 eBPF 程式 (如果有的話)。如果已經沒有其他程式需要執行，此回傳值會被視為 `NETKIT_PASS`。
 - `NETKIT_PASS`: 立即將封包送入接收端的 network stack 處理，且不再呼叫任何其他 eBPF 程式。
 - `NETKIT_DROP`: 立即丟棄該封包。
 - `NETKIT_REDIRECT`: 立即將封包重新導向至另一個網路裝置，並將其排入傳送佇列且不需再經過 host 端的 network stack。
