@@ -1,6 +1,5 @@
 ---
 title: about
-date: 2023-04-06 13:21:02
 ---
 
 # About 關於我
@@ -11,9 +10,9 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English, a softwar
 
 ## Outlines 經歷
 
-### [Resume 簡歷](https://docs.google.com/document/d/13BsR44929g95YvRrmFVp-22UvrVIj23vPLmyfgTPv_M/edit?usp=drive_link)
+### [CV 履歷](https://url.josh.tw/cv)
 
-### [Certificates 證照](https://www.linkedin.com/in/jtr860830/details/certifications/)
+### [Certificates 證照](https://url.josh.tw/certificates)
 
 ### Work experiences 工作經驗
 
