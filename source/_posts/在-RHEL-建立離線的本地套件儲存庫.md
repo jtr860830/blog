@@ -1,8 +1,13 @@
 ---
 title: 在 RHEL 建立離線的本地套件儲存庫
 date: 2026-03-10 00:00:00
+categories:
+  - Linux
 tags:
+  - Linux
 ---
+
+[![hackmd-github-sync-badge](https://hackmd.io/YVUCxMqESeaZ5pgqRmQJww/badge)](https://hackmd.io/YVUCxMqESeaZ5pgqRmQJww)
 
 有鑑於最近需要在 Air-Gap 的環境安裝 Kubernetes (RKE2)，所以將此方法記錄下來，主要是因 RKE2 所需要的系統套件需要透過 rpm 去安裝。會想要用這個方式的原因是因為筆者覺得比較保險，因為 `dnf` 會幫忙解析套件的相依性，比起直接使用 `rpm` 指令安全穩定的多。
 
