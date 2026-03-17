@@ -1,8 +1,15 @@
 ---
 title: 更新由 kubeadm 部署的 K8s 叢集設定
 date: 2026-03-17 22:57:03
+categories:
+  - Kubernetes
 tags:
+  - Cloud Native
+  - Kubernetes
+  - Linux
 ---
+
+[![hackmd-github-sync-badge](https://hackmd.io/aIbZfz1TTnG68-nilrsqxQ/badge)](https://hackmd.io/aIbZfz1TTnG68-nilrsqxQ)
 
 由 `kubeadm` 產生的 Kubernetes 叢集會將叢集的設定值以 ConfigMap 的形式儲存在 `kube-system` 這個 namespace 底下，可以使用以下指令觀察到:
 
