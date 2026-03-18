@@ -1,3 +1,15 @@
+---
+title: 設定 Nginx 為具容錯能力的附載平衡器
+date: 2026-03-18 00:00:00
+categories:
+  - Linux
+tags:
+  - Linux
+  - Nginx
+---
+
+[![hackmd-github-sync-badge](https://hackmd.io/TK1VFyO9QzmOXsmsGtxyAg/badge)](https://hackmd.io/TK1VFyO9QzmOXsmsGtxyAg)
+
 本文將說明如何設定 Nginx，使其成為一個具備容錯能力 (Fault Tolerance) 的負載平衡器 (Load Balancer)。
 
 # 範例設定檔
