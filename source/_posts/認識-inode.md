@@ -8,6 +8,8 @@ tags:
   - Operating System
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/TcoIW5oGS8KzDeW32bkkCQ/badge)](https://hackmd.io/TcoIW5oGS8KzDeW32bkkCQ)
+
 # inode 是什麼
 
 inode 是 Unix-like 作業系統的檔案系統核心資料結構，每個檔案或目錄在磁碟上都對應一個 inode。它儲存關於檔案的所有 metadata，**但不包含檔名**。主要包含 (但不限於) 以下資訊:
