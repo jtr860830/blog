@@ -16,6 +16,8 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English, a softwar
 
 ### Work experiences 工作經驗
 
+- 寬橋有限公司 Brobridge Co., Ltd. 解決方案架構師 (2026 ~ Present)
+- 台灣數碩軟體股份有限公司 SUSE Software Solutions Taiwan Co., Ltd. 解決方案架構師 (2025 ~ 2026)
 - 意門科技股份有限公司 Imonology Inc. 軟體工程師 (2021 ~ 2025)
 - 常仁股份有限公司 JCF Inc. 軟體工程師 (2021 ~ 2025)
 - 國立暨南大學資訊管理學系 Linux 作業系統實務 助教 (2023 ~ 2025)
@@ -29,9 +31,10 @@ My name is **Yu-Hang Hsieh**, but you can call me **Josh** in English, a softwar
 
 ### Community contributions 社群貢獻
 
+- Kubernetes 官方網站繁體中文翻譯 (2026)
 - SITCON Hackathon 2024 Rust Taiwan 社群攤位志工 (2024)
 - ModernWeb'19 Mozilla/Rust Taiwan 社群攤位志工 (2019)
-- Rust Taiwan Rust 官網繁體中文翻譯 (2019)
+- Rust Taiwan Rust 官方網站繁體中文翻譯 (2019)
 - 第五屆淡江黑客松 HackTKU 籌辦人 (2017 ~ 2018)
 - 淡江大學資訊管理學系網路策進會 IMNA 負責人 (2017 ~ 2018)
 - 淡江大學資訊顧問室 TKUICO 負責人 (2017 ~ 2018)
